@@ -1,0 +1,23 @@
+MultiBlock class usages
+
+verifyGroupExclusivity(self)
+    Prints whether the Multiblock is valid or not.
+    This is NOT a boolean.
+    
+getMinkowskiDifferences(self, element)
+    Creates MultiBlock.minkowski_difference_dictionary which contains all Minkowski differences of individual blocks
+
+reorient(self, element)
+    Reorients the multiblock to a new orientation given by element.
+    For best usage, reorient to MultiBlock.group.neutral after operations are done.
+
+getExcludedVolume(self,element)
+    Finds the excluded volume of the Multiblock oriented under the element provided with the same MultiBlock in neutral orientation.
+   
+MonteCarloExcludedVolumes(self, n=10**6)
+    Outputs the excluded volume of the MultiBlock in it's current orientation with the same MultiBlock in neutral orientation.
+    This method uses the Monte-Carlo algorithm.
+    
+calculateExcludedVolumes(self)
+    Outputs a dictionary which gives a right_hand_label of a representative of a coset, along with the associated excluded volume.
+    This method uses the volume of the union of the Minkowski differences.
